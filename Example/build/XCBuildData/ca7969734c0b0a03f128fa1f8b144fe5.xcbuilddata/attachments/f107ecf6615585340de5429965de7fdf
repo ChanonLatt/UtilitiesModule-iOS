@@ -1,0 +1,5 @@
+ extern const unsigned char UtilitiesModule_iOSVersionString[];
+ extern const double UtilitiesModule_iOSVersionNumber;
+
+ const unsigned char UtilitiesModule_iOSVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:UtilitiesModule_iOS  PROJECT:Pods-1" "\n";
+ const double UtilitiesModule_iOSVersionNumber __attribute__ ((used)) = (double)1.;

@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'Pods-Example' in project 'Pods'
+➜ Explicit dependency on target 'UtilitiesModule-iOS' in project 'Pods'
+Target 'UtilitiesModule-iOS' in project 'Pods' (no dependencies)

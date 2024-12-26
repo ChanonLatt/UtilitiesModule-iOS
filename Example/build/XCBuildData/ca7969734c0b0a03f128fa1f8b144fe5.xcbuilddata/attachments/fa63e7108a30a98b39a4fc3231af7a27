@@ -1,0 +1,23 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Release-iphoneos/UtilitiesModule-iOS/UtilitiesModule_iOS.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    'type': 'directory',
+    'name': "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Release-iphoneos/UtilitiesModule-iOS/UtilitiesModule_iOS.framework/Headers"
+    'contents': [{
+      'type': 'file',
+      'name': "UtilitiesModule_iOS-Swift.h",
+      'external-contents': "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/unextended-interface-header.h",
+    }]
+    }]
+}

@@ -1,0 +1,11 @@
+framework module UtilitiesModule_iOS {
+  umbrella header "UtilitiesModule-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module UtilitiesModule_iOS.Swift {
+  header "UtilitiesModule_iOS-Swift.h"
+  requires objc
+}

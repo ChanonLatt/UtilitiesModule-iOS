@@ -1,0 +1,35 @@
+{
+  "" : {
+    "const-values" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UtilitiesModule-iOS-master.swiftconstvalues",
+    "dependencies" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UtilitiesModule-iOS-master.d",
+    "diagnostics" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UtilitiesModule-iOS-master.dia",
+    "emit-module-dependencies" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UtilitiesModule-iOS-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UtilitiesModule-iOS-master-emit-module.dia",
+    "swift-dependencies" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UtilitiesModule-iOS-master.swiftdeps"
+  },
+  "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/UtilitiesModule-iOS/Classes/Extensions/Optional+Ex.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/Optional+Ex.o",
+    "llvm-bc" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/Optional+Ex.bc",
+    "object" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/Optional+Ex.o"
+  },
+  "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/UtilitiesModule-iOS/Classes/Extensions/String+Ex.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/String+Ex.o",
+    "llvm-bc" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/String+Ex.bc",
+    "object" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/String+Ex.o"
+  },
+  "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/UtilitiesModule-iOS/Classes/Extensions/UIImage+Ex.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UIImage+Ex.o",
+    "llvm-bc" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UIImage+Ex.bc",
+    "object" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UIImage+Ex.o"
+  },
+  "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/UtilitiesModule-iOS/Classes/Extensions/UIScrollView+Ex.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UIScrollView+Ex.o",
+    "llvm-bc" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UIScrollView+Ex.bc",
+    "object" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UIScrollView+Ex.o"
+  },
+  "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/UtilitiesModule-iOS/Classes/Extensions/UIViewController+Ex.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UIViewController+Ex.o",
+    "llvm-bc" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UIViewController+Ex.bc",
+    "object" : "/Users/chanon.latt/Downloads/UtilitiesModule-iOS/Example/build/Pods.build/Release-iphoneos/UtilitiesModule-iOS.build/Objects-normal/arm64/UIViewController+Ex.o"
+  }
+}

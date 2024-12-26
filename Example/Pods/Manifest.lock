@@ -1,0 +1,16 @@
+PODS:
+  - UtilitiesModule-iOS (0.0.1)
+
+DEPENDENCIES:
+  - UtilitiesModule-iOS (from `../`)
+
+EXTERNAL SOURCES:
+  UtilitiesModule-iOS:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  UtilitiesModule-iOS: 7a7f4d3e3a8aeec34fbef2ea775b8813a3ac285c
+
+PODFILE CHECKSUM: 49ba9764ada024a22c195319c7d151a215451664
+
+COCOAPODS: 1.16.2
