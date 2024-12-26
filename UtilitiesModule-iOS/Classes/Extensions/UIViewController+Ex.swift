@@ -1,7 +1,13 @@
+//
+//  UIScrollView+Ex.swift
+//  UtilitiesModule-iOS
+//
+//  Created by ITD-Latt Chanon on 26/12/24.
+//
 
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     
     func add(asChildViewController viewController: UIViewController) {
         // Add Child View Controller

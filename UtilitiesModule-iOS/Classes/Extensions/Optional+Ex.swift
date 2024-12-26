@@ -1,7 +1,14 @@
+//
+//  Optional+Ex.swift
+//  UtilitiesModule-iOS
+//
+//  Created by ITD-Latt Chanon on 26/12/24.
+//
+
 
 import Foundation
 
-extension Optional {
+public extension Optional {
     
     func unwrap( _ execute: (Wrapped)->Void) {
         if let value = self {
