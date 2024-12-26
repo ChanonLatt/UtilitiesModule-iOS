@@ -9,6 +9,18 @@ import UIKit
 
 public extension UIViewController {
     
+    func show(_ vc: UIViewController, animated: Bool = true) {
+        if vc is UINavigationController {
+            present(vc, animated: animated)
+        } else if let navigationController = self as? UINavigationController  {
+            navigationController.pushViewController(vc, animated: animated)
+        } else if let navigationController = navigationController {
+            navigationController.pushViewController(vc, animated: animated)
+        } else {
+            present(vc, animated: animated)
+        }
+    }
+    
     func add(asChildViewController viewController: UIViewController) {
         // Add Child View Controller
         addChild(viewController)
@@ -46,5 +58,15 @@ public extension UIViewController {
                 }
             }
         }
+    }
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboardForAll))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboardForAll() {
+        view.endEditing(true)
     }
 }

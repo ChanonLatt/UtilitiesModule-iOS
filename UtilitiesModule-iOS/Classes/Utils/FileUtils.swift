@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+public class FileUtils {
+    class func getDirectoryPath() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+}

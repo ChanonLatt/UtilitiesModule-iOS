@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+public class LoggerUtils {
+    
+    class func myPrint(_ items: Any...,
+                       separator: String = " ",
+                       terminator: String = "\n") {
+        print(items[0],
+              separator: separator,
+              terminator: terminator)
+    }
+}

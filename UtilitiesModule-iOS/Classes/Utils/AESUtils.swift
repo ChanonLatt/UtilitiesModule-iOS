@@ -12,7 +12,7 @@ class AESUtils {
     /// added by Chanon
     class func aesEncryptPlainText(_ text: String) -> String {
         let data = text.data(using: .utf8)
-        let key = SharedUserDefaultHelper.shared.getSharedData(for: SharedUserDefaultHelper.aesEncryptKey) ?? ""
+        let key = UserDefaultUtils.string(forKey: .aesEncryptKey, sharedAppGroup: .appAndWidget) ?? ""
         let keyData = key.data(using:String.Encoding.utf8)!
         guard let encryptedData = try? aesCBCEncrypt(data: data!, key:keyData) else{
             return ""
@@ -112,7 +112,7 @@ class AESUtils {
         guard let data2 = Data(base64Encoded: text, options: .ignoreUnknownCharacters) else {
             return text
         }
-        let key = SharedUserDefaultHelper.shared.getSharedData(for: SharedUserDefaultHelper.aesEncryptKey) ?? ""
+        let key = UserDefaultUtils.string(forKey: .aesEncryptKey, sharedAppGroup: .appAndWidget) ?? ""
         let keyData   = key.data(using:String.Encoding.utf8)!
         guard let decryptData = try? aesCBCDecrypt(data:data2, keyData:keyData) else{
             return ""
