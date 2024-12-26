@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         name.unwrap {
             print($0)
         }
+        
+        print(2.toDouble)
     }
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "UtilitiesModule-iOS",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "Separate Utilities module for ios project.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/ChanonLatt/UtilitiesModule-iOS",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/ChanonLatt/UtilitiesModule-iOS.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "12.0"
@@ -23,5 +23,16 @@
   "swift_versions": [
     "5.0"
   ],
+  "dependencies": {
+    "Alamofire": [
+
+    ],
+    "Kingfisher": [
+      "~> 5.8"
+    ],
+    "ReachabilitySwift": [
+
+    ]
+  },
   "swift_version": "5.0"
 }
