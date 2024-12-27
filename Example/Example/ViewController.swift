@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         }
         
         print(2.toDouble)
+        String.getUUid()
+        Bundle.main.getAppInfo()
     }
 }
 

@@ -12,6 +12,11 @@ import CommonCrypto
 
 public extension String {
     
+    var isValidPassword: Bool {
+        let regex = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+        return range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil
+    }
+    
     func utf8DecodedString()-> String {
         let data = self.data(using: .utf8)
         let message = String(data: data!, encoding: .nonLossyASCII) ?? ""
