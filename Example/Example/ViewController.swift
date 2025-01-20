@@ -22,6 +22,9 @@ class ViewController: UIViewController {
         print(2.toDouble)
         String.getUUid()
         Bundle.main.getAppInfo()
+        
+        let a = [3]
+        a.isSingleElement
     }
 }
 

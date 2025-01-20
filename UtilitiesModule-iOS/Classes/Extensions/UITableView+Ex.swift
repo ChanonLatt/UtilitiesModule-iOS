@@ -7,8 +7,98 @@
 
 import UIKit
 
-public extension UITableView {
+// MARK: - General
 
+public extension UITableView {
+    
+    func reloadTableSizeWithAnimate(_ statement: (() -> Void)? = nil) {
+        beginUpdates()
+        statement?()
+        endUpdates()
+    }
+    
+    func reloadTableSizeWithoutAnimate(_ statement: (() -> Void)? = nil) {
+        UITableView.performWithoutAnimation {
+            beginUpdates()
+            statement?()
+            endUpdates()
+        }
+    }
+    
+    func reloadDataWithoutAnimate() {
+        UITableView.performWithoutAnimation {
+            beginUpdates()
+            reloadData()
+            endUpdates()
+        }
+    }
+    
+    func scrollTopTop(animated: Bool = true) {
+        scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: animated)
+    }
+    
+    func removeTableHeaderTopPadding() {
+        if #available(iOS 15, *) {
+            sectionHeaderTopPadding = .zero
+        }
+    }
+    
+    func registerNibs(_ cells: [UITableViewCell.Type]) {
+        cells.forEach({ registerNib($0.self) })
+    }
+    
+    func registerNib(_ cell: UITableViewCell.Type) {
+        if let nibPath = Bundle.main.path(forResource: cell.identifier, ofType: "nib") {
+            register(UINib(nibName: cell.identifier, bundle: nil), forCellReuseIdentifier: cell.identifier)
+        } else {
+            registerCell(cell.self)
+        }
+    }
+    
+    func registerCells(_ cells: [UITableViewCell.Type]) {
+        cells.forEach({
+            registerCell($0.self)
+        })
+    }
+    
+    func registerCell(_ cell: UITableViewCell.Type) {
+        register(cell.self, forCellReuseIdentifier: cell.identifier)
+    }
+    
+    func register<T: UITableViewCell>(cell: T.Type) {
+        register(UINib(nibName: cell.identifier, bundle: nil), forCellReuseIdentifier: T.identifier)
+    }
+    // swiftlint:disable force_cast
+    func dequeue<T: UITableViewCell>(withType type: T.Type) -> T {
+        dequeueReusableCell(withIdentifier: type.identifier) as! T
+    }
+    
+    // Variable-height UITableView tableHeaderView with autolayout
+    func layoutTableHeaderView(defaultHeight: Double? = nil) {
+        guard let headerView = self.tableHeaderView else { return }
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        let headerWidth = headerView.bounds.size.width
+        let temporaryWidthConstraint = headerView.widthAnchor.constraint(equalToConstant: headerWidth)
+        
+        headerView.addConstraint(temporaryWidthConstraint)
+        headerView.setNeedsLayout()
+        headerView.layoutIfNeeded()
+        
+        let headerSize = headerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+        var actualHeight = headerSize.height
+        if let defaultHeight {
+            actualHeight = actualHeight < defaultHeight ? defaultHeight : actualHeight
+        }
+        var frame = headerView.frame
+        frame.size.height = actualHeight
+        headerView.frame = frame
+        
+        self.tableHeaderView = headerView
+        
+        headerView.removeConstraint(temporaryWidthConstraint)
+        headerView.translatesAutoresizingMaskIntoConstraints = true
+    }
+    
     func setEmptyMessage(_ message: String) {
         
         let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: 50))
@@ -144,6 +234,47 @@ public extension UITableView {
         else {
             self.tableFooterView = nil
         }
+    }
+}
+
+// MARK: - Chainable
+
+public extension UITableView {
+    
+    @discardableResult
+    func chainableSeparatorStyle(_ style: UITableViewCell.SeparatorStyle) -> Self {
+        separatorStyle = style
+        return self
+    }
+    
+    @discardableResult
+    func chainableRemoveTableHeaderTopPadding() -> Self {
+        removeTableHeaderTopPadding()
+        return self
+    }
+    
+    @discardableResult
+    func chainableRegisterCell(_ cell: UITableViewCell.Type) -> Self {
+        registerNib(cell)
+        return self
+    }
+    
+    @discardableResult
+    func chainableRegisterCells(_ cells: [UITableViewCell.Type]) -> Self {
+        registerNibs(cells)
+        return self
+    }
+    
+    @discardableResult
+    func chainableDelegate(_ delegate: UITableViewDelegate) -> Self {
+        self.delegate = delegate
+        return self
+    }
+    
+    @discardableResult
+    func chainableDataSource(_ datasource: UITableViewDataSource) -> Self {
+        self.dataSource = datasource
+        return self
     }
 }
 

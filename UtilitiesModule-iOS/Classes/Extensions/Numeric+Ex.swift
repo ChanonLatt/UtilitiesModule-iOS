@@ -40,7 +40,7 @@ public extension BinaryInteger {
 
 // MARK: - Numberic + Format
 
-extension BinaryFloatingPoint {
+public extension BinaryFloatingPoint {
     
     func indianCurrency() -> String {
         let formatter = NumberFormatter()              // Cache this, NumberFormatter creation is expensive.

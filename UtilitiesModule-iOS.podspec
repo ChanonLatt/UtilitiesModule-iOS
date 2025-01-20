@@ -41,4 +41,5 @@ TODO: Add long description of the pod here.
    s.dependency 'Alamofire'
    s.dependency 'Kingfisher', '~> 5.8'
    s.dependency 'ReachabilitySwift'
+   s.dependency 'SnapKit', '~> 5.7.0'
 end

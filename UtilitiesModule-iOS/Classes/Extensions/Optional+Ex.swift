@@ -23,3 +23,19 @@ public extension Optional {
         !isNil
     }
 }
+
+
+public extension Optional where Wrapped == String {
+    
+    var isNilorEmpty: Bool {
+        isNil || self == ""
+    }
+    
+    var isNotNilNotEmpty: Bool {
+        !isNilorEmpty
+    }
+    
+    var wrappedAndEmptyStringIfNil: String {
+        self ?? ""
+    }
+}

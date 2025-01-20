@@ -12,6 +12,10 @@ import CommonCrypto
 
 public extension String {
     
+    var findImage: UIImage? {
+        UIImage(named: self)
+    }
+    
     var isValidPassword: Bool {
         let regex = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
         return range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil

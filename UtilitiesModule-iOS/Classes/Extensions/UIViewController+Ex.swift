@@ -37,7 +37,7 @@ public extension UIViewController {
         // Notify Child View Controller
         viewController.didMove(toParent: self)
     }
-
+    
     func remove(asChildViewController viewController: UIViewController) {
         // Notify Child View Controller
         viewController.willMove(toParent: nil)
@@ -46,7 +46,7 @@ public extension UIViewController {
         // Notify Child View Controller
         viewController.removeFromParent()
     }
-
+    
     func fixBackgroundSegmentControl(_ segmentControl: UISegmentedControl) {
         if #available(iOS 13.0, *) {
             // Just to be sure it is full loaded

@@ -4,10 +4,12 @@ PODS:
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
   - ReachabilitySwift (5.2.4)
-  - UtilitiesModule-iOS (0.0.2):
+  - SnapKit (5.7.1)
+  - UtilitiesModule-iOS (0.0.3):
     - Alamofire
     - Kingfisher (~> 5.8)
     - ReachabilitySwift
+    - SnapKit (~> 5.7.0)
 
 DEPENDENCIES:
   - UtilitiesModule-iOS (from `../`)
@@ -17,6 +19,7 @@ SPEC REPOS:
     - Alamofire
     - Kingfisher
     - ReachabilitySwift
+    - SnapKit
 
 EXTERNAL SOURCES:
   UtilitiesModule-iOS:
@@ -26,7 +29,8 @@ SPEC CHECKSUMS:
   Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   ReachabilitySwift: 32793e867593cfc1177f5d16491e3a197d2fccda
-  UtilitiesModule-iOS: da62fc19d16883ac0f174f18343c316bb89c446a
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  UtilitiesModule-iOS: ea8cac1392606cc4e249f1e89fd4dd243728ac42
 
 PODFILE CHECKSUM: 49ba9764ada024a22c195319c7d151a215451664
 
