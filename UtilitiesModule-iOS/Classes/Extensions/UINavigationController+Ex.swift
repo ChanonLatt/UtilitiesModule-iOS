@@ -5,7 +5,7 @@
 //  Created by ITD-Latt Chanon on 27/12/24.
 //
 
-import Foundation
+import UIKit
 
 public extension UINavigationController {
     func pushViewController(

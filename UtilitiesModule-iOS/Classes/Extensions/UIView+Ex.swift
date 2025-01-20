@@ -45,9 +45,11 @@ public extension UIView {
         return CGSize(width: rec.width, height: rec.height)
     }
     
-    func radiusCorners(_ corners: CACornerMask, radius: CGFloat) {
-        layer.maskedCorners = corners
-        self.cornerRadius = radius
+    func radiusCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        if !corners.isEmpty {
+            layer.maskedCorners = CACornerMask(rawValue: corners.rawValue)
+        }
+        cornerRadius = radius
     }
     
     func toCircleRadius() {

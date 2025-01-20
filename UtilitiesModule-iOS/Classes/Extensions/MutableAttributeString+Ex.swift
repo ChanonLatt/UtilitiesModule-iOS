@@ -6,6 +6,8 @@
 //  Created by ITD-Latt Chanon on 20/1/25.
 //
 
+import UIKit
+
 public extension NSMutableAttributedString {
     
     @discardableResult

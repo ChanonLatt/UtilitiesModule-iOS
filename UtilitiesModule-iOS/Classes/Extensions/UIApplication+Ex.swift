@@ -5,7 +5,7 @@
 //  Created by ITD-Latt Chanon on 26/12/24.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - General
 

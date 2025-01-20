@@ -5,7 +5,7 @@
 //  Created by ITD-Latt Chanon on 27/12/24.
 //
 
-import Foundation
+import UIKit
 
 private var originalButtonText: String?
 private var activityIndicator: UIActivityIndicatorView!
@@ -76,7 +76,7 @@ public extension UIButton {
 
 // MARK: - Chainable
 
-extension UIButton {
+public extension UIButton {
     
     @discardableResult
     func chainableFont(_ font: UIFont) -> Self {
